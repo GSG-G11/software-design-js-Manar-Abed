@@ -1,0 +1,19 @@
+{
+  "name": "software-design-js-manar-abed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G11/software-design-js-Manar-Abed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G11/software-design-js-Manar-Abed/issues"
+  },
+  "homepage": "https://github.com/GSG-G11/software-design-js-Manar-Abed#readme"
+}
