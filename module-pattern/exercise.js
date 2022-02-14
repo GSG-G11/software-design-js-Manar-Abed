@@ -63,11 +63,17 @@ var UrlParser = (function () {
  * exampleBuilder.
  */
 var createUrlBuilder = function (host) {
-  var builder = function () {
-    const path ='hello'
-    const querystring ={foo:1 , bar:2}
+  var builder = function (obj) {
+    let path = (val) => `/${val}`;
 
-    return `${host}/${path}?foo=${querystring.foo}&bar=${querystring.bar}`
+    let querystr = function (obj) {
+      let keys = Object.keys(obj)
+      return `?${keys[0]}=${obj[keys[0]]}&${keys[1]}=${obj[keys[1]]}`
+    }
+      builder.path = () => host + path(obj.path)
+      builder.querystr = () => host + path(obj.querystr)
+
+    return `${host}${path(obj.path)}${querystr(obj.querystr)}`
   }
 
   return builder;
